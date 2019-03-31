@@ -10,7 +10,7 @@ RANSAC是“RANdom SAmple Consensus”(随机一致性采样)的缩写。RANSAC�
 图-包含很多点的数据集&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;图-RANSAC拟合的直线   
 ### 2)单应性矩阵估计
 在任何模型中都可以使用RANSAC模块，这里使用可能的对应点集来自动找到用于全景图像的单应性矩阵--使用SIFT特征自动找到匹配对应，可也使用如下代码：  
-~~~
+~~~python
 import sift
 
 featname = ['./images5/'+str(i+1)+'.sift' for i in range(2)] 
@@ -34,7 +34,7 @@ for i in range(1):
 估计出图像见的单应性矩阵（使用RANSAC算法）后，将所有图像扭曲到一个公共平面上，就完成了一副简单的全景图像。一般的，这个公共平面选择为中心图像的平面，不然会发生大量的形变。因为我们的图像是由照相机水平旋转拍摄成的，所以我们可以使用一个简单的步骤：将中心图像左边或右边的区域填充0，为扭曲图像腾出空间。  
 **p.s需要注意的是：**若拼接图为两张，则影响不会很大，中心图像做为平面中心的操作在多福图像拼接时会有明显的效果。  
 ### 1)代码：
-~~~
+~~~python
 from pylab import *
 from numpy import *
 from PIL import Image
@@ -131,8 +131,8 @@ show()
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FA2.jpg)  
 nice！看起来毫无PS痕迹！  
 再看一组同样条件下的照片：  
-![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB1.jpg.jpg)  
-![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB2.jpg.jpg)  
+![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB1.jpg)  
+![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB2.jpg)  
 这一组可以看到明显的拼接缝隙，这是由照片的色差造成的，我们可以看到整体效果还不错。  
 #### 室外情况下、景深较大：
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%A4%A71.jpg)  
@@ -142,3 +142,6 @@ nice！看起来毫无PS痕迹！
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E5%AE%A4%E5%86%851.jpg)  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E5%AE%A4%E5%86%852.jpg)  
 在这种情况下，算法效果就不是很好了，出现成功拼接的概率大大降低，很容易出现拼接错误等情况。
+## 后话：
+本文代码运行环境为 python2.7,环境配置以相关文件请访问之前的PythonComputerVision系列文章，链接：https://github.com/Nocami?tab=repositories   
+本文所用实例图片为JiMei University。
