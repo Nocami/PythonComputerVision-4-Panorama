@@ -126,7 +126,7 @@ show()
 此代码段为2图图像拼接，若需要多幅图，只需将其中的注释部分取消即可，图像顺序为自右向左。  
 ### 2)实例效果
 下面我们看看实际效果：  
-#### 室外情况下、景深较小：
+#### 双图-室外情况下、景深较小：
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FA1.jpg)  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FA2.jpg)  
 nice！看起来毫无PS痕迹！  
@@ -134,14 +134,18 @@ nice！看起来毫无PS痕迹！
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB1.jpg)  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%B0%8FB2.jpg)  
 这一组可以看到明显的拼接缝隙，这是由照片的色差造成的，我们可以看到整体效果还不错。  
-#### 室外情况下、景深较大：
+#### 双图-室外情况下、景深较大：
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%A4%A71.jpg)  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E6%99%AF%E6%B7%B1%E5%A4%A72.jpg)  
 当物体景深过大时，会产生尺度问题，影响拼接图像的质量，我们可以看到右下角树干有明显瑕疵。  
-#### 室内情况、焦距近、图像杂乱：
+#### 双图-室内情况、焦距近、图像杂乱：
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E5%AE%A4%E5%86%851.jpg)  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/%E5%AE%A4%E5%86%852.jpg)  
-在这种情况下，算法效果就不是很好了，出现成功拼接的概率大大降低，很容易出现拼接错误等情况。
+在这种情况下，算法效果就不是很好了，出现成功拼接的概率大大降低，很容易出现拼接错误等情况。  
+#### 多图拼接：
+![image](https://github.com/Nocami/PythonComputerVision-4-Panorama/blob/master/images/fin1.jpg)  
+![image](https://github.com/Nocami/PythonComputerVision-4-Panorama/blob/master/images/fin2.jpg)  
+同一点拍摄的四幅图像拼接成一张全景图，这种情况下，全景拼接的效果表现得特别明显。
 ## 后话：
 本文代码运行环境为 python2.7,环境配置以相关文件请访问之前的PythonComputerVision系列文章，链接：https://github.com/Nocami?tab=repositories   
 本文所用实例图片为JiMei University。
