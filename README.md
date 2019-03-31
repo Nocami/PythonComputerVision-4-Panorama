@@ -6,5 +6,5 @@
 RANSAC是“RANdom SAmple Consensus”(随机一致性采样)的缩写。RANSAC算法是一种经典的消除误匹配的方法,具有匹配精度高、可靠度强等优点，该方法是用来找到正确模型来拟合带有噪声数据的迭代方法。RANSAC的标准例子：用一条直线拟合带有噪声数据的点集。简单的最小二乘在该例子中可能会失效,但RANSAC可以挑选出正确的点，然后获取能够正确拟合的直线。  
 #### 示例
 从一组观测数据中找出合适的2维直线。所给出的观测数据中包含正确点和错误点，正确点可以相似的被直线所通过，而错误点远离于直线，分布在其两侧。普通的最小二乘法找不到那条贯穿全部点的直线，因为它会努力的去适应包括错误点在内的所有点。而RANSAC算法能得出一个仅仅用正确点的计算模型，且命中率很高。但尽管如此，它也不能保证100%正确。  
-![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/tree/master/images/1.png)![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/tree/master/images/2.png)  
+![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/1.png)![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/2.png)  
 图-包含很多点的数据集                        图-RANSAC拟合的直线  
