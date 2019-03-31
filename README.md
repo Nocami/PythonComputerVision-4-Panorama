@@ -7,4 +7,4 @@ RANSAC是“RANdom SAmple Consensus”(随机一致性采样)的缩写。RANSAC�
 #### 示例
 从一组观测数据中找出合适的2维直线。所给出的观测数据中包含正确点和错误点，正确点可以相似的被直线所通过，而错误点远离于直线，分布在其两侧。普通的最小二乘法找不到那条贯穿全部点的直线，因为它会努力的去适应包括错误点在内的所有点。而RANSAC算法能得出一个仅仅用正确点的计算模型，且命中率很高。但尽管如此，它也不能保证100%正确。  
 ![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/1.png)![image](https://github.com/Nocami/PythonComputerVision-4-ImageMosaic/blob/master/images/2.png)  
-图-包含很多点的数据集                                 图-RANSAC拟合的直线  
+图-包含很多点的数据集&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;图-RANSAC拟合的直线  
